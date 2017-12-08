@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="col-md-8">
+            <label for="">Список операций</label>
+            <ul class="list-group">
+                {%for tran in trans %}
+                <li class="list-group-item"><a href="{% url 'show' id=tran.id %}"> {{tran.name}}</a> : <b>{{tran.sum}}</b> Rub <br>{{tran.note}}</li>
+                {% endfor%}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

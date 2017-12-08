@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h2>{{ trans.name }}</h2>
+    <h4>Стормость: {{ trans.sum }} Руб.</h4>
+     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Подробнее
+  </button>
+    <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <h4>{{ trans.note }}</h4>
+  </div>
+</div>
+{% endblock %}
